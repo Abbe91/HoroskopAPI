@@ -1,0 +1,21 @@
+
+{
+    "horoscopels":[
+        {
+            "name" : "Aries",
+            "gloss": "The Ram",
+            "element": "Fire",
+            "longitude_start": "0",
+            "longitude_end": "30"
+
+        },
+        {
+            "name" : "Taurus",
+            "gloss": "The Bull",
+            "element": "Earth",
+            "longitude_start": "0",
+            "longitude_end": "30"
+        }
+    ]
+}
+
