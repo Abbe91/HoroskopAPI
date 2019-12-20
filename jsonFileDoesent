@@ -272,3 +272,60 @@
     }
     
 }
+
+
+
+
+<?php 
+session_start();
+include './horoscopeinformation.php';
+
+if(isset($_SERVER['REQUEST_METHOD'])){
+    if($_SERVER['REQUEST_METHOD'] === "GET"){
+        // Checking if key 'name' has been found then wite it on my site and sesseion.
+        if(isset($_GET['date'])){
+            // Saving the value of the key 'name' from the request into the key 'personName' in $_SESSION.
+             $_SESSION["date"] = unserialize($_GET["date"]);
+
+
+          
+             $_SESSION["date"] = unserialize($_GET["date"]);
+            echo json_encode($_GET['date']);
+        }else{
+          //  echo json_encode("name is not in the body");
+        }
+    }
+}
+
+
+
+?>
+<?php
+include './horoscopeinformation.php';
+
+if(isset($_SERVER['REQUEST_METHOD'])) {
+ 
+ 
+ if($_SERVER['REQUEST_METHOD'] === 'GET') {
+ 
+ if (isset($_SESSION["key"])) {
+     $_SESSION["date"]= $key;
+    
+    echo json_encode($key);
+
+
+error_log($_POST["key"]);
+
+ 
+ 
+ }
+ } else {
+ echo json_encode("not a Get method");
+ }
+ 
+} else {
+ 
+ // Sending a fault message explaining that this not is a valid request.
+ echo json_encode("No valid request");
+}
+?>
