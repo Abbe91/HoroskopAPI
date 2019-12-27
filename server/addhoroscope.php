@@ -1,9 +1,10 @@
 
 <?php 
 
+session_start();
 include './horoscopeinformation.php';
 
-session_start();
+
 
 //kolla om request har redan gjord
 
@@ -15,16 +16,18 @@ if(isset($_SERVER['REQUEST_METHOD'])){
         if(isset($_POST['date'])) {
            
             // Saving the value of the key 'name' from the request into the key 'personName' in $_SESSION.
-        //    $_SESSION["date"] = serialize($_POST["date"]);
-        //      echo json_encode($_POST['date']);
+           $_SESSION["date"] = serialize($_POST["date"]);
+             //echo json_encode($_POST['date']);
            
              getHoroscope($_POST['date']);
             // Sending the saved value back to the client.
-            echo json_encode($_POST['date']);
+             echo json_encode($_POST['date']);
+            // echo json_encode($_POST['date']);
+
         } else {
            
-            // Sending a fault message explaining that the name is not set.
-            echo json_encode("name is not set in body");
+           
+             echo json_encode("please write your date");
         }
 
     }else {

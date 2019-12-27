@@ -1,1 +1,82 @@
 
+body{
+    margin: 0;
+    background: url('./Img/bgk.jpeg') no-repeat;
+    /* background: linear-gradient(rgba(22, 2, 53, 0.822), rgba(27, 108, 155, 0.788)); */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.349);
+    height: 420px;
+    width: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 6px;
+    border-top: solid 12px #ffd100;
+}
+
+.butts{
+    margin-top: 50px;
+}
+
+input {
+    font-size: 1.7rem;        
+    box-shadow: 6px 6px 3px 1px rgba(53, 53, 54, 0.2);
+    color: rgb(236, 211, 219);
+    background: none;
+    border-radius: 100px;
+    padding: .8rem;
+    
+}
+button {
+    padding: 1rem;
+    margin: 10px;
+    border-radius: 100px;
+    border: solid white 3px;
+    background: none;
+    text-transform: uppercase;
+    box-shadow:  6px 6px 3px 1px rgba(53, 54, 53, 0.2);
+}
+
+label {
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    color: rgb(247, 247, 247);
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+h1 {
+    font-family:   'Condiment', cursive;
+    font-size: 5rem;
+    color: black;
+    margin: 0;
+    letter-spacing: 6px;
+}
+.show-sign {
+    display: flex;
+    background: rgba(196, 191, 183, 0.3);
+    border-radius: 6px;
+}
+.return-feedback{
+    color: whitesmoke;
+    padding: 1rem;
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+}
+.fas, .far, .fab {
+    margin-right: 1rem;
+}
+#green {color: rgb(124, 241, 124);}
+#yellow {color: rgb(255, 255, 0);}
+#red {color: rgb(255, 0, 0);}
+#orange {color: rgb(250, 167, 12);}
+
