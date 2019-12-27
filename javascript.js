@@ -1,5 +1,4 @@
 
-
 function add() {
 
     let url = "./server/addhoroscope.php"
@@ -7,7 +6,8 @@ function add() {
     
     let formData = new FormData()
     let varde = document.getElementById('type').value;
-  
+ 
+
     formData.set("date", varde)
     makeRequest("./server/addhoroscope.php", "POST", formData, (result) => {
         console.log(result)
@@ -21,12 +21,13 @@ function makeRequest(url, method, formData, callback){
         method: 'post',
         body: formData
         }).then((response) => {
-        console.log(response)
+        console.log("maybe this one is the right info")
         return response.json()
         }).then((result) => {
-        callback(result)
-        }).catch((err)=>{
-        console.log("Error: ", err)
+            console.log(result)
+            callback("if I write the date this what it should show")
+        }).catch((err)=>{    
+        console.log("you should write your birthday date: ", err)
         })
 
        
@@ -37,19 +38,20 @@ function showData(){
     let method ="GET"
     fetch(url, {
         method: method,
-
     }).then((Response)=> {
         return Response.json()
     }).then((body)=> {
-        if(body){
-           echo ("hej");
+        if(body ==''){
+            let contant = document.getElementById("outPUt");
+            contant.innerText = "it is empty";
         }else{
-            echo ("hej");
+            let contant = document.getElementById("outPUt");
+            contant.innerText = body;
+        //     console.log(body);
+        //    echo ("hej");
         }
-        let contant = document.getElementById("outPUT");
-        contant.innerText = body;
     }).catch((err)=>{
-
+       
     })
 };  
 
