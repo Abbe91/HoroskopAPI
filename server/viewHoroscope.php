@@ -34,7 +34,7 @@ if(isset($_SERVER['REQUEST_METHOD'])){
     }else {
   
         // Sending a fault message explaining that the request-method is not POST.
-    
+        echo json_encode("feeeeel");
     }
 
 
