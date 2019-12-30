@@ -6,7 +6,9 @@
             "gloss": "The Ram",
             "element": "Fire",
             "longitude_start": "0",
-            "longitude_end": "30"
+            "longitude_end": "30",
+            "date": "01-01:01-03"
+            
 
         },
         {
@@ -14,8 +16,10 @@
             "gloss": "The Bull",
             "element": "Earth",
             "longitude_start": "0",
-            "longitude_end": "30"
+            "longitude_end": "30",
+            "date": "02-03:01-05"
         }
     ]
 }
+
 
