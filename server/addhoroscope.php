@@ -17,12 +17,14 @@ if(isset($_SERVER['REQUEST_METHOD'])){
            
             // Saving the value of the key 'name' from the request into the key 'personName' in $_SESSION.
            $_SESSION["date"] = serialize($_POST["date"]);
-             //echo json_encode($_POST['date']);
-           
+
+            //serialize($_POST["date"]);
+          
              getHoroscope($_POST['date']);
+             
             // Sending the saved value back to the client.
              echo json_encode($_POST['date']);
-            // echo json_encode($_POST['date']);
+           
 
         } else {
            
