@@ -1,17 +1,18 @@
 <?php
-session_start();
-
-include './horoscopeinformation.php';
-if(isset($_SERVER['REQUEST_METHOD'])) {
-    if($_SERVER['REQUEST_METHOD'] === 'DELETE') {
-    if(isset($_SESSION['date'])){
-        $_SESSION['date'] = null;
-        session_unset();
+// session_start();
+// if(isset($_SERVER['REQUEST_METHOD'])) {
+//     if($_SERVER['REQUEST_METHOD'] === 'DELETE') {
+//     if(!isset($_SESSION['horoscope'])){
         
-        echo "true";
-    } else{
-        echo "false";
-    }  
-}
-}
+//         $_SESSION['horoscope'] = null;
+
+//         session_destroy();
+        
+//         echo "true";
+//     } else{
+     
+//         echo "false";
+//     }  
+// }
+// }
 ?>

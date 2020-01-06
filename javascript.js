@@ -24,20 +24,12 @@ function makeRequest(url, method, formData, callback){
         console.log(response)
         return response.json()
         }).then((json) => {
-            // let arrayOfValues = json.value
-            // for(let i = 0; i < arrayOfValues.length; i++){
-            //     let element = document.createElement('h3')
-            //      element.innerHTML = arrayOfValues[i].horsocopeArray
-            //     document.body.appendChild(element)
-            // }
             console.log(json)
-           // callback("if I write the date this what it should show")
         }).catch((err)=>{    
         console.log("you should write your birthday date: ", err)
         })
-
-       
     };
+
 
 function showData(){
     let url = "./server/viewHoroscope.php"
@@ -51,18 +43,15 @@ function showData(){
             let contant = document.getElementById("outPUt");
             contant.innerText = "it is empty";
         }else{
-      
-        
            let contant = document.getElementById("outPUt");
-
            contant.innerText = body;
-        //     console.log(body);
-        //    echo ("hej");
         }
     }).catch((err)=>{
-       
+       console.log(err);
     })
-};  
+}; 
+
+
 function deleteData(){
   
     let url = "./server/deleteHoroscope.php"
@@ -82,11 +71,9 @@ function deleteData(){
             let contant = document.getElementById("outPUt");
             contant.innerText = "here is nothing to delete WTF!!!";
             }
-        //     console.log(body);
-        //    echo ("hej");
         }
     }).catch((err)=>{
-       
+        console.error(err)
     })
 };  
 
