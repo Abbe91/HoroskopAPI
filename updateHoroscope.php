@@ -10,12 +10,12 @@ include './horoscopeinformation.php';
 
 if(isset($_SERVER['REQUEST_METHOD'])){
 
-    if($_SERVER['REQUEST_METHOD'] === "POST") {
+    if($_SERVER['REQUEST_METHOD'] === "PUT") {
 
         // Checking if key 'name' has been set in the request-body.
         if(isset($_POST['date'])) {
            
-            if(isset($_SESSION["horsocope"])) {
+            if(!isset($_SESSION["horsocope"])) {
                 // Horoskop finns sparat i session, returnera false
                 $horsocope = getHoroscope($_POST['date']);
                 $_SESSION["horsocope"] = serialize($horsocope);

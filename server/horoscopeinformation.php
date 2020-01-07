@@ -33,7 +33,8 @@ function getHoroscope($date) {
             ($month === $fromMonth && $day >= $fromDay) ||
             ($month === $toMonth && $day <= $toDay)
         ) {
-            error_log($key);
+         
+            return $key;
         }
     }
 }
