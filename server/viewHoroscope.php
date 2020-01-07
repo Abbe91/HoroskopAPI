@@ -1,6 +1,6 @@
 <?php 
 session_start();
-
+include './horoscopeinformation.php';
 if(isset($_SERVER['REQUEST_METHOD'])){
     if($_SERVER['REQUEST_METHOD'] === "GET"){
 
@@ -25,6 +25,3 @@ if(isset($_SERVER['REQUEST_METHOD'])){
 }
 
 ?>
-
-
-
