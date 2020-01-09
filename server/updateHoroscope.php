@@ -10,23 +10,24 @@ include './horoscopeinformation.php';
 
 if(isset($_SERVER['REQUEST_METHOD'])){
 
-    if($_SERVER['REQUEST_METHOD'] === "PUT") {
+    if($_SERVER['REQUEST_METHOD'] === "POST") {
 
         // Checking if key 'name' has been set in the request-body.
         if(isset($_POST['date'])) {
            
-            if(!isset($_SESSION["horsocope"])) {
+            if(isset($_SESSION["horoscope"])) {
                 // Horoskop finns sparat i session, returnera false
                 $horsocope = getHoroscope($_POST['date']);
-                $_SESSION["horsocope"] = serialize($horsocope);
+                $_SESSION["horoscope"] = serialize($horsocope);
                 echo json_encode(true);
             } else {
                 // Horoskop finns inte sparat i session, spara nytt horoskop och returnera true
+               
                 echo json_encode(false);
             }
 
         } else {
-            echo json_encode("please write your date");
+            echo json_encode("wrong");
         }
 
     }else {

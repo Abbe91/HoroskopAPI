@@ -1,18 +1,19 @@
 <?php 
 session_start();
-include './horoscopeinformation.php';
 if(isset($_SERVER['REQUEST_METHOD'])){
     if($_SERVER['REQUEST_METHOD'] === "GET"){
-
-        if(!isset($_SESSION["horoscope"])) {
+   
+        if(isset($_SESSION["horoscope"])) {
             // Echo horoscope from session
 
-            echo json_encode(unserialize($_SESSION["horsocope"]));
+            echo json_encode(unserialize($_SESSION["horoscope"]));
+          
             exit;
         } else {
             // Echo false
             
             echo json_encode(false);
+            
             exit;
         }
             
