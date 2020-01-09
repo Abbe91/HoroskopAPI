@@ -1,18 +1,16 @@
 <?php
-// session_start();
-// if(isset($_SERVER['REQUEST_METHOD'])) {
-//     if($_SERVER['REQUEST_METHOD'] === 'DELETE') {
-//     if(!isset($_SESSION['horoscope'])){
+session_start();
+if(isset($_SERVER['REQUEST_METHOD'])) {
+    if($_SERVER['REQUEST_METHOD'] === 'DELETE') {
+    if(isset($_SESSION['horoscope'])){
+        unset($_SESSION['horoscope']);
+        echo json_encode(true);
         
-//         $_SESSION['horoscope'] = null;
-
-//         session_destroy();
-        
-//         echo "true";
-//     } else{
+       
+    } else{
      
-//         echo "false";
-//     }  
-// }
-// }
+        echo json_encode(false);
+    }  
+}
+}
 ?>
