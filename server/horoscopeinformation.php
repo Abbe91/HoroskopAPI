@@ -14,7 +14,7 @@ function getHoroscope($date) {
         "Sagittarius"=>"11-22-12-20",
         "Capricorn"=>"12-21-01-19",
         "Aquarius"=>"01-20-02-18",
-        "Pisces"=>"2-19-03-20"
+        "Pisces"=>"02-19-03-20"
     );
 
     $explodedDate = explode("-", $date);
